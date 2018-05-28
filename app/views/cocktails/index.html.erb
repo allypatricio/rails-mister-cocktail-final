@@ -1,21 +1,24 @@
 <div class="home-banner">
   <h1>Fucking-Fab Cocktails</h1>
+  <p><%= link_to "+ Cocktails", new_cocktail_path %></p>
 </div>
 
 <div class="container">
   <div class="row">
-    <div class="col-sm-6 col-sm-offset-3">
-     <% @cocktails.each do |cocktail| %>
-<h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
-<% end %>
+    <% @cocktails.each do |cocktail| %>
+    <div class="col-xs-12 col-sm-4">
 
-<%= link_to "Add", new_cocktail_path %>
+<div class="card"
+  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
+
+        <div class="card-description">
+          <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+        </div>
+      </div>
     </div>
+    <% end %>
   </div>
 </div>
-
-
-
 
 
 

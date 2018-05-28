@@ -1,7 +1,16 @@
 <div class="home-banner">
-<%= form_for @cocktail do |f| %>
-<%= f.label :name %>
-<%= f.text_field :name %>
-<%= f.submit %>
+  <%= simple_form_for(@cocktail) do |f| %>
+  <!-- [...] -->
+  <%= f.input :name %>
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
+
+
+
+<p><%= link_to "Back to list", cocktails_path %></p>
+
+  <!-- [...] -->
 <% end %>
+
 </div>
+

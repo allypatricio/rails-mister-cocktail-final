@@ -5,4 +5,24 @@
   color: #eee;
   text-align: center;
   padding-top: 40vh;
+
+}
+
+.home-banner h1 {
+  text-decoration: bold;
+  font-size: 80px
+}
+
+.home-banner a {
+  color: #eee;
+  background-color: #F4ACB7;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.home-banner a:hover {
+  color: #eee;
+  text-decoration: none;
+  font-size: 23px;
 }
